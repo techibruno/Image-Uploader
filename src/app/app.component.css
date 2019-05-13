@@ -1,0 +1,20 @@
+#file-uploader{
+    display: none
+}
+
+.image-preview{
+    margin-top: 20px;
+}
+
+.remove-image-button{
+    margin-left: 30px;
+    color: #FFF;
+}
+
+.btn-upload{
+    margin-top: 20px;
+}
+
+.btn-primary{
+    margin-top: 20px;
+}
