@@ -10,16 +10,15 @@ import { FormService } from 'src/app/service/form.service';
 export class AppComponent implements OnInit{
 
   title = 'Image-Uploader';
-  creteForm: FormGroup
-  img: any;
+  createForm: FormGroup
+  imgUrl: any;
   images: any = [];
   selectedFile: File;
 
   constructor(private fb: FormBuilder, private _formService: FormService){}
 
   ngOnInit() {
-
-    this.creteForm = this.fb.group({
+    this.createForm = this.fb.group({
       Brand: [''],
       Model: ['']
     });
@@ -33,8 +32,8 @@ export class AppComponent implements OnInit{
       reader.readAsDataURL(this.selectedFile);
       reader.onload = (event: any) => 
       {
-          this.img = reader.result;
-          this.images.push(this.img);
+          this.imgUrl = reader.result;
+          this.images.push(this.imgUrl);
       }
       
     }  
@@ -48,7 +47,7 @@ export class AppComponent implements OnInit{
   }
 
   onSubmit() {
-    this._formService.save(this.creteForm.value, this.images).subscribe(
+    this._formService.save(this.createForm.value, this.images).subscribe(
       (response: any) =>
       {
         if (response > 0) {

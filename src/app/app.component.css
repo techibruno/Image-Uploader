@@ -1,5 +1,9 @@
-#file-uploader{
-    display: none
+.container{
+    margin-top: 10px;
+}
+
+.file-uploader{
+    display: none;
 }
 
 .image-preview{

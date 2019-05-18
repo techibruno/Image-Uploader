@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
 
-    <form [formGroup]="creteForm">
+    <form [formGroup]="createForm">
       <h3 class="header-title">Form</h3>
 
       <div class="form-row">
@@ -19,7 +19,7 @@
         <button type="button" class="btn btn-default" (click)="fileInput.click()">Add Image
           <i class="fa fa-plus"></i>
         </button>
-        <input type='file' id="file-uploader" (change)="onSelectFile($event)" #fileInput/>
+        <input type='file' class="file-uploader" (change)="onSelectFile($event)" #fileInput/>
 
         <div *ngIf="images.length > 0">
           <div *ngFor='let img of images;' class="image-preview">
